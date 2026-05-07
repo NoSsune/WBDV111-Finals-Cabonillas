@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User | Yomi Navi</title>
+  <link rel="stylesheet" href="user.css">
+</head>
+<body class="user-page">
+  <header class="user-header">
+    <a class="user-brand" href="user.html">Yomi Navi</a>
+    <nav class="user-nav" aria-label="User navigation">
+      <a class="active" href="user.html">Home</a>
+      <a href="manga-library.html">Manga Library</a>
+      <a href="user.html#trending">Trending</a>
+      <button class="nav-filter-button" type="button" aria-expanded="false" aria-controls="genre-filter">Filter</button>
+      <a href="profile.html">Profile</a>
+      <div class="user-account">
+        <button class="user-avatar-button" type="button" aria-label="Open account menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12.25c2.35 0 4.25-1.9 4.25-4.25S14.35 3.75 12 3.75 7.75 5.65 7.75 8s1.9 4.25 4.25 4.25Zm0 2c-3.05 0-7.25 1.58-7.25 4.5v.75c0 .41.34.75.75.75h13c.41 0 .75-.34.75-.75v-.75c0-2.92-4.2-4.5-7.25-4.5Z"/>
+          </svg>
+        </button>
+        <div class="account-menu">
+          <button class="logout-button" type="button">Log Out</button>
+        </div>
+      </div>
+    </nav>
+    <div class="genre-filter" id="genre-filter" aria-label="Genre filter">
+      <button class="is-selected" type="button" data-genre="all">All</button>
+      <button type="button" data-genre="action">Action</button>
+      <button type="button" data-genre="adventure">Adventure</button>
+      <button type="button" data-genre="comedy">Comedy</button>
+      <button type="button" data-genre="dark fantasy">Dark Fantasy</button>
+      <button type="button" data-genre="fantasy">Fantasy</button>
+      <button type="button" data-genre="food">Food</button>
+      <button type="button" data-genre="martial arts">Martial Arts</button>
+      <button type="button" data-genre="supernatural">Supernatural</button>
+    </div>
+  </header>
+
+  <main class="user-main">
+    <form class="search-bar" role="search">
+      <label class="sr-only" for="manga-search">Search manga</label>
+      <input id="manga-search" type="search" placeholder="Search manga" autocomplete="off">
+    </form>
+    <p class="search-status" aria-live="polite"></p>
+
+    <section class="section-block" id="trending" aria-labelledby="trending-title">
+      <h1 class="section-title" id="trending-title">Trending</h1>
+      <div class="manga-grid">
+        <article class="manga-card searchable-manga" data-title="JoJo's Bizarre" data-genres="action adventure supernatural">
+          <div class="cover"><img src="JoJo.jpg" alt="JoJo's Bizarre cover"><span class="rank">1</span></div>
+          <h2 class="manga-title">JoJo's Bizarre</h2>
+        </article>
+        <article class="manga-card searchable-manga" data-title="One Piece" data-genres="action adventure comedy">
+          <div class="cover"><img src="One Piece.jpg" alt="One Piece cover"><span class="rank">2</span></div>
+          <h2 class="manga-title">One Piece</h2>
+        </article>
+        <article class="manga-card searchable-manga" data-title="HUNTER X HUNTER" data-genres="action adventure fantasy">
+          <div class="cover"><img src="HXH.jpg" alt="HUNTER X HUNTER cover"><span class="rank">3</span></div>
+          <h2 class="manga-title">HUNTER X HUNTER</h2>
+        </article>
+        <article class="manga-card searchable-manga" data-title="Chainsaw Man" data-genres="action dark fantasy supernatural">
+          <div class="cover"><img src="Chainsaw Man Cover Volume 1      _      Chainsaw Man Portada Tomo 1.jpg" alt="Chainsaw Man cover"><span class="rank">4</span></div>
+          <h2 class="manga-title">Chainsaw Man</h2>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" id="available" aria-labelledby="available-title">
+      <h2 class="section-title-left" id="available-title">List of Manga</h2>
+      <div class="manga-grid">
+        <article class="manga-card searchable-manga" data-title="Overlord" data-genres="action dark fantasy fantasy">
+          <div class="cover"><img src="Overlord.jpg" alt="Overlord cover"></div>
+          <h3 class="manga-title">Overlord</h3>
+        </article>
+        <article class="manga-card searchable-manga" data-title="Food Wars!" data-genres="comedy food">
+          <div class="cover"><img src="Food Wars.jpg" alt="Food Wars! cover"></div>
+          <h3 class="manga-title">Food Wars!</h3>
+        </article>
+        <article class="manga-card searchable-manga" data-title="Sakamoto Days" data-genres="action comedy">
+          <div class="cover"><img src="sakamoto days.jpg" alt="Sakamoto Days cover"></div>
+          <h3 class="manga-title">Sakamoto Days</h3>
+        </article>
+        <article class="manga-card searchable-manga" data-title="Naruto" data-genres="action adventure martial arts">
+          <div class="cover"><img src="Naruto.jpg" alt="Naruto cover"></div>
+          <h3 class="manga-title">Naruto</h3>
+        </article>
+      </div>
+
+      <h2 class="section-title-left" id="continue-title">Continue Reading</h2>
+      <div class="manga-grid">
+        <article class="manga-card searchable-manga" data-title="One Piece" data-genres="action adventure comedy">
+          <div class="cover"><img src="One Piece.jpg" alt="Continue reading One Piece"></div>
+          <h3 class="manga-title">One Piece</h3>
+        </article>
+        <article class="manga-card searchable-manga" data-title="Naruto" data-genres="action adventure martial arts">
+          <div class="cover"><img src="Naruto.jpg" alt="Continue reading Naruto"></div>
+          <h3 class="manga-title">Naruto</h3>
+        </article>
+        <article class="manga-card searchable-manga" data-title="HUNTER X HUNTER" data-genres="action adventure fantasy">
+          <div class="cover"><img src="HXH.jpg" alt="Continue reading HUNTER X HUNTER"></div>
+          <h3 class="manga-title">HUNTER X HUNTER</h3>
+        </article>
+        <article class="manga-card searchable-manga" data-title="Food Wars!" data-genres="comedy food">
+          <div class="cover"><img src="Food Wars.jpg" alt="Continue reading Food Wars!"></div>
+          <h3 class="manga-title">Food Wars!</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="user-footer">
+    <div class="footer-info">
+      <div>
+        <p class="footer-brand">Yomi Navi</p>
+        <p class="copyright">&copy;2026 Yomi Navi</p>
+      </div>
+      <p class="contact-line">
+        <span>Contact Us:</span>
+        <span>+0922123456</span>
+        <span>officialyominavi@gmail.com</span>
+      </p>
+    </div>
+    <div class="social-block">
+      <p class="social-label">Social Media</p>
+      <div class="social-icons">
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 8.35V6.7c0-.8.38-1.18 1.24-1.18h1.5V2.86A20.4 20.4 0 0 0 14.95 2c-2.18 0-3.67 1.33-3.67 3.77v2.58H8.82v2.98h2.46V19h3.02v-7.67h2.37l.38-2.98H14.4Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.82 3h3.03l-6.62 7.56L22 21h-6.08l-4.76-6.22L5.72 21H2.68l7.08-8.09L2.32 3h6.23l4.3 5.69L17.82 3Zm-1.06 16.16h1.68L7.64 4.74H5.84l10.92 14.42Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm5-1.48a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="user.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Yomi Navi</title>
+  <link rel="stylesheet" href="auth.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      color: #edebdd;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #1b1717;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      padding: 0 24px;
+      background: #1b1717;
+      border-bottom: 1px solid #630000;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.34);
+    }
+
+    .brand-title {
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-shell {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .main-nav a {
+      border-bottom: 2px solid transparent;
+      padding: 20px 0 17px;
+      white-space: nowrap;
+      transition: border-color 160ms ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible,
+    .main-nav .active {
+      border-color: #810100;
+      outline: none;
+    }
+
+    .profile-button {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid #810100;
+      border-radius: 50%;
+      color: #edebdd;
+      background: #630000;
+      cursor: pointer;
+    }
+
+    .profile-button svg {
+      width: 21px;
+      height: 21px;
+      fill: currentColor;
+    }
+
+    .contact-main {
+      min-height: calc(100vh - 180px);
+      display: grid;
+      place-items: center;
+      padding: 58px 24px 72px;
+      text-align: center;
+      color: #edebdd;
+      background: #1b1717;
+    }
+
+    .contact-content {
+      width: min(760px, 100%);
+      padding: clamp(28px, 5vw, 56px);
+      border: 1px solid #810100;
+      border-radius: 8px;
+      background: #201919;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+    }
+
+    .page-title,
+    .social-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .contact-detail {
+      margin-top: 18px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: #edebdd;
+    }
+
+    .social-title {
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+
+    .large-socials {
+      display: flex;
+      justify-content: center;
+      gap: clamp(24px, 7vw, 64px);
+    }
+
+    .large-social-link {
+      display: grid;
+      place-items: center;
+      width: clamp(66px, 10vw, 86px);
+      height: clamp(66px, 10vw, 86px);
+      border-radius: 50%;
+      color: #edebdd;
+      background: #630000;
+      border: 1px solid #810100;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .large-social-link:hover,
+    .large-social-link:focus-visible {
+      color: #edebdd;
+      background: #810100;
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .large-social-link svg {
+      width: 38px;
+      height: 38px;
+      fill: currentColor;
+    }
+
+    .site-footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px;
+      color: #edebdd;
+      background: #630000;
+      border-top: 1px solid #810100;
+    }
+
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-brand {
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .copyright,
+    .contact-line,
+    .social-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      text-transform: uppercase;
+    }
+
+    .social-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: #630000;
+      background: #edebdd;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .social-link:hover,
+    .social-link:focus-visible {
+      background: #ffffff;
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .social-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        height: auto;
+        min-height: 64px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 18px;
+      }
+
+      .nav-shell {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .main-nav {
+        gap: 12px;
+        overflow-x: auto;
+        max-width: calc(100vw - 82px);
+        padding-bottom: 4px;
+        font-size: 0.66rem;
+      }
+
+      .main-nav a {
+        padding: 6px 0;
+      }
+
+      .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .social-block {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-title" href="index.html#home" aria-label="Yomi Navi home">Yomi Navi</a>
+
+    <div class="nav-shell">
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#recommendation">Recommendation</a>
+        <a href="index.html#trending">Trending</a>
+        <a href="about.html">About Us</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+
+      <button class="profile-button" type="button" aria-label="Open sign in">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 12.25c2.35 0 4.25-1.9 4.25-4.25S14.35 3.75 12 3.75 7.75 5.65 7.75 8s1.9 4.25 4.25 4.25Zm0 2c-3.05 0-7.25 1.58-7.25 4.5v.75c0 .41.34.75.75.75h13c.41 0 .75-.34.75-.75v-.75c0-2.92-4.2-4.5-7.25-4.5Z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-content" aria-labelledby="contact-title">
+      <h1 class="page-title" id="contact-title">Contacts</h1>
+      <p class="contact-detail">Phone Number: +0922123456</p>
+      <p class="contact-detail">Official Email: officialyominavi@gmail.com</p>
+
+      <h2 class="social-title">Social Media</h2>
+      <div class="large-socials">
+        <a class="large-social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 8.35V6.7c0-.8.38-1.18 1.24-1.18h1.5V2.86A20.4 20.4 0 0 0 14.95 2c-2.18 0-3.67 1.33-3.67 3.77v2.58H8.82v2.98h2.46V19h3.02v-7.67h2.37l.38-2.98H14.4Z"/></svg>
+        </a>
+        <a class="large-social-link" href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.82 3h3.03l-6.62 7.56L22 21h-6.08l-4.76-6.22L5.72 21H2.68l7.08-8.09L2.32 3h6.23l4.3 5.69L17.82 3Zm-1.06 16.16h1.68L7.64 4.74H5.84l10.92 14.42Z"/></svg>
+        </a>
+        <a class="large-social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm5-1.48a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24Z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-info">
+      <div>
+        <p class="footer-brand">Yomi Navi</p>
+        <p class="copyright">&copy;2026 Yomi Navi</p>
+      </div>
+      <p class="contact-line">
+        <span>Contact Us:</span>
+        <span>+0922123456</span>
+        <span>officialyominavi@gmail.com</span>
+      </p>
+    </div>
+
+    <div class="social-block" aria-label="Social media links">
+      <p class="social-label">Social Media</p>
+      <div class="social-icons">
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 8.35V6.7c0-.8.38-1.18 1.24-1.18h1.5V2.86A20.4 20.4 0 0 0 14.95 2c-2.18 0-3.67 1.33-3.67 3.77v2.58H8.82v2.98h2.46V19h3.02v-7.67h2.37l.38-2.98H14.4Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.82 3h3.03l-6.62 7.56L22 21h-6.08l-4.76-6.22L5.72 21H2.68l7.08-8.09L2.32 3h6.23l4.3 5.69L17.82 3Zm-1.06 16.16h1.68L7.64 4.74H5.84l10.92 14.42Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm5-1.48a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="auth.js"></script>
+</body>
+</html>

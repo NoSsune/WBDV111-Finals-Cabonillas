@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Admin View | Yomi Navi</title>
+  <link rel="stylesheet" href="user.css">
+</head>
+<body class="user-page superadmin-page">
+  <header class="user-header">
+    <a class="user-brand" href="superadmin.html">Yomi Navi</a>
+    <nav class="user-nav" aria-label="Super admin navigation">
+      <a class="active" href="superadmin.html">Dashboard</a>
+      <a href="#user-administration">Users</a>
+      <a href="#platform-control">Platform</a>
+      <a href="#reports">Reports</a>
+      <div class="user-account">
+        <button class="user-avatar-button" type="button" aria-label="Open account menu" aria-expanded="false">SA</button>
+        <div class="account-menu">
+          <button class="logout-button" type="button">Log Out</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-panel" aria-labelledby="superadmin-dashboard-title">
+      <div class="dashboard-heading">
+        <div>
+          <h1 class="section-title-left" id="superadmin-dashboard-title">Super Admin Analytical Dashboard</h1>
+          <p>Platform governance, account control, and reader feedback overview.</p>
+        </div>
+        <span class="status-pill">System Control</span>
+      </div>
+
+      <div class="metric-grid" aria-label="Super admin metrics">
+        <article class="metric-card">
+          <span>Admin Accounts</span>
+          <strong>6</strong>
+          <p>2 pending creation</p>
+        </article>
+        <article class="metric-card">
+          <span>Suspended Users</span>
+          <strong>11</strong>
+          <p>Account actions this week</p>
+        </article>
+        <article class="metric-card">
+          <span>Platform Health</span>
+          <strong>96%</strong>
+          <p>Service stability score</p>
+        </article>
+        <article class="metric-card">
+          <span>Reader Feedback</span>
+          <strong>34</strong>
+          <p>Reports waiting review</p>
+        </article>
+      </div>
+
+      <div class="analytics-grid">
+        <section class="dashboard-module wide-module" id="user-administration" aria-labelledby="user-admin-title">
+          <div class="module-header">
+            <div>
+              <h2 id="user-admin-title">User Administration</h2>
+              <p>Create admin accounts, suspend users, assign roles, and audit permission changes.</p>
+            </div>
+            <span class="status-pill warning">Role Review</span>
+          </div>
+          <div class="table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Account</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Next Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>mika_admin</td>
+                  <td>Admin</td>
+                  <td><span class="tag safe">Ready</span></td>
+                  <td>Create</td>
+                </tr>
+                <tr>
+                  <td>reader_088</td>
+                  <td>User</td>
+                  <td><span class="tag danger">Suspended</span></td>
+                  <td>Audit</td>
+                </tr>
+                <tr>
+                  <td>content_lead</td>
+                  <td>Moderator</td>
+                  <td><span class="tag review">Role Change</span></td>
+                  <td>Assign</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-module" id="platform-control" aria-labelledby="platform-title">
+          <div class="module-header">
+            <div>
+              <h2 id="platform-title">Platform Control</h2>
+              <p>Manage platform settings, maintenance mode, policy controls, and feature availability.</p>
+            </div>
+          </div>
+          <ul class="dashboard-list">
+            <li><span>Maintenance mode</span><strong>Off</strong></li>
+            <li><span>Reader registration</span><strong>Open</strong></li>
+            <li><span>Upload moderation</span><strong>Strict</strong></li>
+            <li><span>System alerts</span><strong>2</strong></li>
+          </ul>
+        </section>
+
+        <section class="dashboard-module" id="reports" aria-labelledby="reports-title">
+          <div class="module-header">
+            <div>
+              <h2 id="reports-title">Reports</h2>
+              <p>Review reader feedback, issue reports, content complaints, and satisfaction signals.</p>
+            </div>
+          </div>
+          <ul class="dashboard-list">
+            <li><span>Manga feedback</span><strong>14</strong></li>
+            <li><span>Bug reports</span><strong>8</strong></li>
+            <li><span>Recommendation requests</span><strong>9</strong></li>
+            <li><span>Resolved feedback</span><strong>61%</strong></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="user-footer">
+    <div class="footer-info">
+      <div>
+        <p class="footer-brand">Yomi Navi</p>
+        <p class="copyright">&copy;2026 Yomi Navi</p>
+      </div>
+      <p class="contact-line"><span>Contact Us:</span><span>+0922123456</span><span>officialyominavi@gmail.com</span></p>
+    </div>
+    <div class="social-block">
+      <p class="social-label">Social Media</p>
+      <div class="social-icons">
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 8.35V6.7c0-.8.38-1.18 1.24-1.18h1.5V2.86A20.4 20.4 0 0 0 14.95 2c-2.18 0-3.67 1.33-3.67 3.77v2.58H8.82v2.98h2.46V19h3.02v-7.67h2.37l.38-2.98H14.4Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.82 3h3.03l-6.62 7.56L22 21h-6.08l-4.76-6.22L5.72 21H2.68l7.08-8.09L2.32 3h6.23l4.3 5.69L17.82 3Zm-1.06 16.16h1.68L7.64 4.74H5.84l10.92 14.42Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm5-1.48a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="user.js"></script>
+</body>
+</html>

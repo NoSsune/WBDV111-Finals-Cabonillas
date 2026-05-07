@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Yomi Navi</title>
+  <link rel="stylesheet" href="user.css">
+</head>
+<body class="user-page profile-page">
+  <header class="user-header">
+    <a class="user-brand" href="user.html">Yomi Navi</a>
+    <nav class="user-nav" aria-label="User navigation">
+      <a href="user.html">Home</a>
+      <a href="manga-library.html">Manga Library</a>
+      <a href="user.html#trending">Trending</a>
+      <a href="user.html#available">Filter</a>
+      <a class="active" href="profile.html">Profile</a>
+      <div class="user-account">
+        <button class="user-avatar-button" type="button" aria-label="Open account menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12.25c2.35 0 4.25-1.9 4.25-4.25S14.35 3.75 12 3.75 7.75 5.65 7.75 8s1.9 4.25 4.25 4.25Zm0 2c-3.05 0-7.25 1.58-7.25 4.5v.75c0 .41.34.75.75.75h13c.41 0 .75-.34.75-.75v-.75c0-2.92-4.2-4.5-7.25-4.5Z"/>
+          </svg>
+        </button>
+        <div class="account-menu">
+          <button class="logout-button" type="button">Log Out</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="user-main">
+    <section class="profile-layout" aria-label="User profile">
+      <div class="profile-side">
+        <div class="profile-avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 12.25c2.35 0 4.25-1.9 4.25-4.25S14.35 3.75 12 3.75 7.75 5.65 7.75 8s1.9 4.25 4.25 4.25Zm0 2c-3.05 0-7.25 1.58-7.25 4.5v.75c0 .41.34.75.75.75h13c.41 0 .75-.34.75-.75v-.75c0-2.92-4.2-4.5-7.25-4.5Z"/>
+          </svg>
+        </div>
+        <button class="change-profile" type="button">Change Profile</button>
+      </div>
+
+      <form class="profile-form">
+        <label class="profile-field">
+          <span>Username</span>
+          <input type="text" value="user" aria-label="Username">
+        </label>
+        <label class="profile-field">
+          <span>Email</span>
+          <input type="email" value="user@yominavi.com" aria-label="Email">
+        </label>
+        <label class="profile-field">
+          <span>Contact No.</span>
+          <input type="tel" value="+0922123456" aria-label="Contact number">
+        </label>
+        <label class="profile-field">
+          <span>Bio</span>
+          <textarea aria-label="Bio">Manga reader exploring new stories with Yomi Navi.</textarea>
+        </label>
+      </form>
+    </section>
+  </main>
+
+  <footer class="user-footer">
+    <div class="footer-info">
+      <div>
+        <p class="footer-brand">Yomi Navi</p>
+        <p class="copyright">&copy;2026 Yomi Navi</p>
+      </div>
+      <p class="contact-line"><span>Contact Us:</span><span>+0922123456</span><span>officialyominavi@gmail.com</span></p>
+    </div>
+    <div class="social-block">
+      <p class="social-label">Social Media</p>
+      <div class="social-icons">
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 8.35V6.7c0-.8.38-1.18 1.24-1.18h1.5V2.86A20.4 20.4 0 0 0 14.95 2c-2.18 0-3.67 1.33-3.67 3.77v2.58H8.82v2.98h2.46V19h3.02v-7.67h2.37l.38-2.98H14.4Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.82 3h3.03l-6.62 7.56L22 21h-6.08l-4.76-6.22L5.72 21H2.68l7.08-8.09L2.32 3h6.23l4.3 5.69L17.82 3Zm-1.06 16.16h1.68L7.64 4.74H5.84l10.92 14.42Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm5-1.48a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="user.js"></script>
+</body>
+</html>

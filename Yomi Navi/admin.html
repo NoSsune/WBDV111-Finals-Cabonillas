@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin View | Yomi Navi</title>
+  <link rel="stylesheet" href="user.css">
+</head>
+<body class="user-page admin-page">
+  <header class="user-header">
+    <a class="user-brand" href="admin.html">Yomi Navi</a>
+    <nav class="user-nav" aria-label="Admin navigation">
+      <a class="active" href="admin.html">Dashboard</a>
+      <a href="#manga-management">Manga</a>
+      <a href="#user-management">Users</a>
+      <a href="#content-management">Content</a>
+      <a href="#profile">Profile</a>
+      <div class="user-account">
+        <button class="user-avatar-button" type="button" aria-label="Open account menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12.25c2.35 0 4.25-1.9 4.25-4.25S14.35 3.75 12 3.75 7.75 5.65 7.75 8s1.9 4.25 4.25 4.25Zm0 2c-3.05 0-7.25 1.58-7.25 4.5v.75c0 .41.34.75.75.75h13c.41 0 .75-.34.75-.75v-.75c0-2.92-4.2-4.5-7.25-4.5Z"/>
+          </svg>
+        </button>
+        <div class="account-menu">
+          <button class="logout-button" type="button">Log Out</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <p class="admin-kicker">Admin View</p>
+    <section class="admin-panel" aria-labelledby="admin-dashboard-title">
+      <div class="dashboard-heading">
+        <div>
+          <h1 class="section-title-left" id="admin-dashboard-title">Admin Analytical Dashboard</h1>
+          <p>Moderation, user activity, and content health overview.</p>
+        </div>
+        <span class="status-pill">Live Review</span>
+      </div>
+
+      <div class="metric-grid" aria-label="Admin metrics">
+        <article class="metric-card">
+          <span>Pending Manga</span>
+          <strong>18</strong>
+          <p>Needs safety decision</p>
+        </article>
+        <article class="metric-card">
+          <span>Flagged Users</span>
+          <strong>7</strong>
+          <p>Activity status alerts</p>
+        </article>
+        <article class="metric-card">
+          <span>Content Issues</span>
+          <strong>4</strong>
+          <p>Page errors detected</p>
+        </article>
+        <article class="metric-card">
+          <span>Recommendations</span>
+          <strong>12</strong>
+          <p>Waiting for update</p>
+        </article>
+      </div>
+
+      <div class="analytics-grid">
+        <section class="dashboard-module wide-module" id="manga-management" aria-labelledby="manga-title">
+          <div class="module-header">
+            <div>
+              <h2 id="manga-title">Manga Management</h2>
+              <p>Approve safe manga, ban highly inappropriate uploads, and review content safety notes.</p>
+            </div>
+            <span class="status-pill warning">18 Queued</span>
+          </div>
+          <div class="table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Risk</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Shadow Cafe</td>
+                  <td><span class="tag safe">Safe</span></td>
+                  <td>Awaiting approval</td>
+                  <td>Approve</td>
+                </tr>
+                <tr>
+                  <td>Night Pulse</td>
+                  <td><span class="tag danger">Highly Inappropriate</span></td>
+                  <td>Escalated</td>
+                  <td>Ban</td>
+                </tr>
+                <tr>
+                  <td>Moonlit Class</td>
+                  <td><span class="tag review">Needs Review</span></td>
+                  <td>Content check</td>
+                  <td>Inspect</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-module" id="user-management" aria-labelledby="users-title">
+          <div class="module-header">
+            <div>
+              <h2 id="users-title">User Management</h2>
+              <p>Track activity, reader status, warnings, login patterns, and account health.</p>
+            </div>
+          </div>
+          <ul class="dashboard-list">
+            <li><span>Active readers today</span><strong>284</strong></li>
+            <li><span>Accounts under warning</span><strong>7</strong></li>
+            <li><span>Inactive for 30 days</span><strong>42</strong></li>
+            <li><span>Repeated report activity</span><strong>5</strong></li>
+          </ul>
+        </section>
+
+        <section class="dashboard-module" id="content-management" aria-labelledby="content-title">
+          <div class="module-header">
+            <div>
+              <h2 id="content-title">Content Management</h2>
+              <p>Manage page content, recommendation slots, broken sections, and sudden site errors.</p>
+            </div>
+          </div>
+          <ul class="dashboard-list">
+            <li><span>Homepage recommendations</span><strong>Update</strong></li>
+            <li><span>Broken cover images</span><strong>2</strong></li>
+            <li><span>Sudden page errors</span><strong>4</strong></li>
+            <li><span>Pending banner changes</span><strong>3</strong></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="profile-admin-view" id="profile" aria-labelledby="profile-title">
+      <h2 class="section-title-left" id="profile-title">Profile Admin View</h2>
+      <div class="profile-layout" aria-label="Admin profile">
+        <div class="profile-side">
+          <div class="profile-avatar" aria-hidden="true">A</div>
+          <button class="change-profile" type="button">Change Profile</button>
+        </div>
+
+        <form class="profile-form">
+          <label class="profile-field">
+            <span>Username</span>
+            <input type="text" value="admin" aria-label="Username">
+          </label>
+          <label class="profile-field">
+            <span>Email</span>
+            <input type="email" value="admin@yominavi.com" aria-label="Email">
+          </label>
+          <label class="profile-field">
+            <span>Contact No.</span>
+            <input type="tel" value="+0922123456" aria-label="Contact number">
+          </label>
+          <label class="profile-field">
+            <span>Bio</span>
+            <textarea aria-label="Bio">Admin profile for managing manga safety, user activity, and Yomi Navi content operations.</textarea>
+          </label>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="user-footer">
+    <div class="footer-info">
+      <div>
+        <p class="footer-brand">Yomi Navi</p>
+        <p class="copyright">&copy;2026 Yomi Navi</p>
+      </div>
+      <p class="contact-line"><span>Contact Us:</span><span>+0922123456</span><span>officialyominavi@gmail.com</span></p>
+    </div>
+    <div class="social-block">
+      <p class="social-label">Social Media</p>
+      <div class="social-icons">
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 8.35V6.7c0-.8.38-1.18 1.24-1.18h1.5V2.86A20.4 20.4 0 0 0 14.95 2c-2.18 0-3.67 1.33-3.67 3.77v2.58H8.82v2.98h2.46V19h3.02v-7.67h2.37l.38-2.98H14.4Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.82 3h3.03l-6.62 7.56L22 21h-6.08l-4.76-6.22L5.72 21H2.68l7.08-8.09L2.32 3h6.23l4.3 5.69L17.82 3Zm-1.06 16.16h1.68L7.64 4.74H5.84l10.92 14.42Z"/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm5-1.48a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="user.js"></script>
+</body>
+</html>
